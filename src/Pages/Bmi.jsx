@@ -1,4 +1,4 @@
-import {Link} from "react-router"
+import {Link} from "react-router-dom"
 import bmi from "./../assets/bmi.png"
 export default function Bmi() {
   return (
@@ -15,23 +15,17 @@ export default function Bmi() {
 
             {/* ส่วนของฟอร์ม สำหรับป้อน เลือก คลิก */}
             <form className="w-full ">
-                <label className="font-kanit">ป้อนน่้ำหนัก (kg)</label>
-                <input type="number" name=""  id="" placeholder="เช่น 65"
-                    className="border border-gray-300 p-2 rounded-md
-                                placeholder: font-kanit" />
+                <label htmlFor="weight" className="font-kanit">ป้อนน่้ำหนัก (kg)</label>
+                <input type="number" name="weight" id="weight" placeholder="เช่น 65"
+                    className="block w-full border border-gray-300 p-2 rounded-md placeholder:font-kanit" />
 
-                <label className="font-kanit mt-3">ส่วนสูง (cm)</label>
-                <input type="number" name=""  id="" placeholder="เช่น 170"
-                    className="border border-gray-300 p-2 rounded-md"
-                                 placeholder: font-kanit/>
+                <label htmlFor="height" className="font-kanit mt-3 block">ส่วนสูง (cm)</label>
+                <input type="number" name="height" id="height" placeholder="เช่น 170"
+                    className="block w-full border border-gray-300 p-2 rounded-md placeholder:font-kanit" />
 
-                <button className="w-full bg-blue-600 hover:bg-blue-800 text-white
+                <button type="button" className="w-full bg-blue-600 hover:bg-blue-800 text-white
                                 font-kanit font-bold py-2 px-4 rounded mt-5">
                 คํานวณ BMI
-                </button>
-                <button className="w-full bg-gray-600 mt-3 p-2 rouded-me
-                                     text-black font-kanit font-bold cursor-pointer hover:bg-gray-500">
-                    
                 </button>
             </form>
             <div className="flex justify-center mt-5">
@@ -42,10 +36,10 @@ export default function Bmi() {
                     0.00
                 </p>
             </div>
-            <link to="/" className="w-full bg-gray-600 mt-3 p-2 rouded-me
-                                     text-black font-kanit font-bold text-center hover:bg-gray-500">
-            กลับหน้าหลัก                            
-            </link>
+            <Link to="/" className="block w-full bg-gray-300 mt-3 p-2 rounded-md
+                     text-black font-kanit font-bold text-center hover:bg-gray-400">
+                กลับหน้าหลัก
+            </Link>
 
         </div>
     </>

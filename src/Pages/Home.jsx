@@ -3,7 +3,7 @@ import CardMenu from "./../components/CardMenu";
 import bmi from "./../assets/bmi.png"
 import bmr from "./../assets/bmr.png"
 import car from "./../assets/car.png"
-import {Link} from "react-router"
+import {Link} from "react-router-dom"
 import Footer from "../components/Footer";
  
 export default function Home() {
